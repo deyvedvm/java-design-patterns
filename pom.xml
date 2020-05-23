@@ -8,6 +8,14 @@
     <artifactId>java-design-patterns</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <developers>
+        <developer>
+            <name>Deyve Vieira</name>
+            <email>dvmachado@id.uff.br</email>
+            <url>https://www.deyve.dev/</url>
+        </developer>
+    </developers>
+
     <build>
 
         <plugins>
