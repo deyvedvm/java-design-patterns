@@ -1,2 +1,7 @@
 # Jetbrains
 .idea
+
+*.iml
+
+# Java
+target/
