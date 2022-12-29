@@ -1,11 +1,7 @@
 package dev.deyve.mediator;
 
-public class ListBox extends UIControl{
+public class ListBox extends UIControl {
     private String selection;
-
-    public ListBox(DialogBox owner) {
-        super(owner);
-    }
 
     public String getSelection() {
         return selection;
@@ -13,6 +9,6 @@ public class ListBox extends UIControl{
 
     public void setSelection(String selection) {
         this.selection = selection;
-        owner.change(this);
+        notifyEventHandlers();
     }
 }

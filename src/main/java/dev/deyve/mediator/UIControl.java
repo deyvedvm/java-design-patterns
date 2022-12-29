@@ -1,9 +1,16 @@
 package dev.deyve.mediator;
 
-public class UIControl {
-    protected DialogBox owner;
+import java.util.ArrayList;
+import java.util.List;
 
-    public UIControl(DialogBox owner) {
-        this.owner = owner;
+public abstract class UIControl {
+    private final List<EventHandler> eventHandlers = new ArrayList<>();
+
+    public void addEventHandler(EventHandler observer) {
+        eventHandlers.add(observer);
+    }
+
+    protected void notifyEventHandlers() {
+        eventHandlers.forEach(EventHandler::handle);
     }
 }
