@@ -1,14 +1,5 @@
 package dev.deyve.memento;
 
-import lombok.Getter;
-import lombok.ToString;
+public record EditorState(String content) {
 
-@Getter
-public class EditorState {
-
-    private final String content;
-
-    public EditorState(String content) {
-        this.content = content;
-    }
 }
