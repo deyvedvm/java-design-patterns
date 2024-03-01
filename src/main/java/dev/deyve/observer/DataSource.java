@@ -1,4 +1,4 @@
-package dev.deyve.observer;;
+package dev.deyve.observer;
 
 import lombok.Getter;
 
