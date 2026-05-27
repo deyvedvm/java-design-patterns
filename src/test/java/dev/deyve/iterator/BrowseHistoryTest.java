@@ -39,6 +39,39 @@ class BrowseHistoryTest {
     }
 
     @Test
+    void popShouldReturnAndRemoveLastUrl() {
+        var history = new BrowseHistory();
+        history.push("a");
+        history.push("b");
+        history.push("c");
+
+        assertEquals("c", history.pop());
+        assertEquals("b", history.pop());
+
+        Iterator<String> remaining = history.createIterator();
+        assertTrue(remaining.hasNext());
+        assertEquals("a", remaining.current());
+    }
+
+    @Test
+    void popWithDuplicatesShouldRemoveTheLastOne() {
+        var history = new BrowseHistory();
+        history.push("a");
+        history.push("b");
+        history.push("a");
+
+        history.pop();
+
+        Iterator<String> remaining = history.createIterator();
+        List<String> visited = new ArrayList<>();
+        while (remaining.hasNext()) {
+            visited.add(remaining.current());
+            remaining.next();
+        }
+        assertEquals(List.of("a", "b"), visited);
+    }
+
+    @Test
     void multipleIteratorsShouldBeIndependent() {
         var history = new BrowseHistory();
         history.push("a");

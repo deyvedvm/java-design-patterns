@@ -11,13 +11,11 @@ public class BrowseHistory {
     }
 
     public String pop() {
-        var lastIndex = urls.size();
-        var lastUrl = urls.get(lastIndex);
-        urls.remove(lastUrl);
-        return lastUrl;
+        var lastIndex = urls.size() - 1;
+        return urls.remove(lastIndex);
     }
 
-    public Iterator createIterator() {
+    public Iterator<String> createIterator() {
         return new ListIterator(this);
     }
 
