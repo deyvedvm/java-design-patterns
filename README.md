@@ -30,6 +30,13 @@ java -cp target/classes dev.deyve.observer.Main
 
 Substitua `observer` pelo pacote do padrão que quer executar.
 
+Rodar os testes:
+
+```bash
+mvn test                                # todos os testes
+mvn test -Dtest=BrowseHistoryTest       # uma classe específica
+```
+
 ## Padrões implementados
 
 Todos os padrões abaixo são **comportamentais** (GoF):
