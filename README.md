@@ -1,10 +1,10 @@
 # Java Design Patterns
 
-Repositório de estudo dos padrões de projeto Gang of Four (GoF) implementados em Java 17. Cada padrão fica em seu próprio pacote, é autocontido e possui uma classe `Main` que demonstra o uso na prática.
+Repositório de estudo dos padrões de projeto Gang of Four (GoF) implementados em Java 21. Cada padrão fica em seu próprio pacote, é autocontido e possui uma classe `Main` que demonstra o uso na prática.
 
 ## Stack
 
-- Java 17
+- Java 21
 - Maven
 - Lombok (`provided`)
 
