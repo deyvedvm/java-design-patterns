@@ -39,7 +39,17 @@ mvn test -Dtest=BrowseHistoryTest       # uma classe específica
 
 ## Padrões implementados
 
-Todos os padrões abaixo são **comportamentais** (GoF):
+### Criacionais
+
+| Padrão | Pacote | Demo |
+| --- | --- | --- |
+| Singleton | `dev.deyve.singleton` | `AppConfig.getInstance()` sempre devolve a mesma instância |
+| Factory Method | `dev.deyve.factorymethod` | `NotificationFactory` decide entre `EmailNotification`/`SmsNotification` |
+| Abstract Factory | `dev.deyve.abstractfactory` | `WindowsFactory`/`MacFactory` produzem famílias de `Button` + `Checkbox` |
+| Builder | `dev.deyve.builder` | `Pizza.builder(...)` monta um objeto imutável passo a passo |
+| Prototype | `dev.deyve.prototype` | `Circle`/`Rectangle` clonam via copy constructor |
+
+### Comportamentais
 
 | Padrão | Pacote | Demo |
 | --- | --- | --- |
@@ -57,6 +67,11 @@ Todos os padrões abaixo são **comportamentais** (GoF):
 
 ```
 src/main/java/dev/deyve/
+├── singleton/
+├── factorymethod/
+├── abstractfactory/
+├── builder/
+├── prototype/
 ├── observer/
 ├── mediator/
 ├── memento/
