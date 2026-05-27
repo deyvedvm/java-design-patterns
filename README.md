@@ -1,5 +1,7 @@
 # Java Design Patterns
 
+[![CI](https://github.com/deyvedvm/java-design-patterns/actions/workflows/ci.yml/badge.svg)](https://github.com/deyvedvm/java-design-patterns/actions/workflows/ci.yml)
+
 Repositório de estudo dos padrões de projeto Gang of Four (GoF) implementados em Java 21. Cada padrão fica em seu próprio pacote, é autocontido e tem uma classe de teste JUnit que faz o papel de demo + verificação de comportamento.
 
 ## Stack
