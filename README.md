@@ -32,6 +32,18 @@ Cada pacote começa com um `package-info.java` resumindo intenção, problema, t
 | Builder | `dev.deyve.builder` | `Pizza.builder(...)` monta um objeto imutável passo a passo |
 | Prototype | `dev.deyve.prototype` | `Circle`/`Rectangle` clonam via copy constructor |
 
+### Estruturais
+
+| Padrão | Pacote | Demo |
+| --- | --- | --- |
+| Adapter | `dev.deyve.adapter` | `SquarePegAdapter` faz um `SquarePeg` caber num `RoundHole` |
+| Bridge | `dev.deyve.bridge` | `RemoteControl` × `Device` (TV/Radio) evoluem independentes |
+| Composite | `dev.deyve.composite` | `Folder` agrega `File`/`Folder` sob a mesma interface `FileSystemNode` |
+| Decorator | `dev.deyve.decorator` | `EncryptionDecorator` + `CompressionDecorator` empilham sobre `DataSource` |
+| Facade | `dev.deyve.facade` | `OrderFacade` orquestra `InventoryService` + `PaymentService` + `ShippingService` |
+| Flyweight | `dev.deyve.flyweight` | `TreeTypeFactory` compartilha `TreeType` entre milhares de `Tree` |
+| Proxy | `dev.deyve.proxy` | `LazyImageProxy` adia o load do `RealImage` até o primeiro `display()` |
+
 ### Comportamentais
 
 | Padrão | Pacote | Demo |
@@ -45,25 +57,16 @@ Cada pacote começa com um `package-info.java` resumindo intenção, problema, t
 | Template Method | `dev.deyve.template` | `Task` define o esqueleto; `TransferMoneyTask`/`GenerateReportTask` preenchem os passos |
 | Chain of Responsibility | `dev.deyve.chainofresponsibility` | `Authenticator → Logger → Compressor` processam um `HttpRequest` |
 | Visitor | `dev.deyve.visitor` | `HtmlDocument` aceita `Operation` (`PlainText`, `Highlight`) sobre seus `HtmlNode` |
+| Command | `dev.deyve.command` | `RemoteControl` executa `Command` com histórico para `undo` |
+| Interpreter | `dev.deyve.interpreter` | AST `AddExpression`/`SubtractExpression`/`NumberExpression` avaliada via `interpret()` |
 
 ## Estrutura
 
 ```
 src/main/java/dev/deyve/
-├── singleton/
-├── factorymethod/
-├── abstractfactory/
-├── builder/
-├── prototype/
-├── observer/
-├── mediator/
-├── memento/
-├── state/
-├── iterator/
-├── strategy/
-├── template/
-├── chainofresponsibility/
-└── visitor/
+├── singleton/         factorymethod/      abstractfactory/    builder/        prototype/
+├── adapter/           bridge/             composite/          decorator/      facade/         flyweight/      proxy/
+└── observer/          mediator/           memento/            state/          iterator/       strategy/       template/       chainofresponsibility/      visitor/        command/        interpreter/
 ```
 
 Cada pacote em `src/main/java` segue o mesmo formato:
