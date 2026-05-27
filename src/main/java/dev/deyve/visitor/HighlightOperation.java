@@ -1,6 +1,6 @@
 package dev.deyve.visitor;
 
-public class HighLightOperation implements Operation {
+public class HighlightOperation implements Operation {
 
     @Override
     public void apply(HeadingNode headingNode) {

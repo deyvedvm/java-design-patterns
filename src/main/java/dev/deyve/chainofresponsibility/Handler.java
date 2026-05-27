@@ -1,4 +1,4 @@
-package dev.deyve.chainresponsability;
+package dev.deyve.chainofresponsibility;
 
 public abstract class Handler {
 
