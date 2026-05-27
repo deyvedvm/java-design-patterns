@@ -20,6 +20,10 @@ mvn test -Dtest=PizzaBuilderTest#shouldBuildPizzaWithFluentApi   # um cenário s
 
 Cada pacote começa com um `package-info.java` resumindo intenção, problema, trade-offs e quando NÃO usar o padrão — leia-o antes do código.
 
+Para estudo visual e comparativo:
+- [`DIAGRAMS.md`](DIAGRAMS.md) — diagrama de classe (Mermaid) de cada um dos 23 padrões.
+- [`COMPARISONS.md`](COMPARISONS.md) — confusões comuns: Strategy×State, CoR×Decorator, Mediator×Observer, Template×Strategy.
+
 ## Padrões implementados
 
 ### Criacionais
