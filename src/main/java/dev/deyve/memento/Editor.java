@@ -1,13 +1,16 @@
 package dev.deyve.memento;
 
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
 public class Editor {
 
     private String content;
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
 
     public EditorState createState() {
         return new EditorState(content);

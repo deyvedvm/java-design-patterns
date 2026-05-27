@@ -1,11 +1,8 @@
 package dev.deyve.memento;
 
-import lombok.ToString;
-
 import java.util.ArrayList;
 import java.util.List;
 
-@ToString
 public class History {
 
     private final List<EditorState> states = new ArrayList<>();
@@ -22,5 +19,14 @@ public class History {
         states.remove(lastState);
 
         return lastState;
+    }
+
+    public int size() {
+        return states.size();
+    }
+
+    @Override
+    public String toString() {
+        return "History(states=" + states + ")";
     }
 }

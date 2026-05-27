@@ -12,7 +12,7 @@
  * <ul>
  *   <li>+ API fluente, fácil de ler.</li>
  *   <li>+ Permite objeto final imutável.</li>
- *   <li>- Boilerplate extra (mitigado com Lombok {@code @Builder}).</li>
+ *   <li>- Boilerplate extra (mais classes/métodos do que um construtor simples).</li>
  * </ul>
  *
  * <p><b>Quando NÃO usar:</b> objetos com poucos parâmetros (até ~4) e sem

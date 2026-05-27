@@ -1,13 +1,16 @@
 package dev.deyve.state;
 
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
 public class Canvas {
 
     private Tool currentTool;
+
+    public Tool getCurrentTool() {
+        return currentTool;
+    }
+
+    public void setCurrentTool(Tool currentTool) {
+        this.currentTool = currentTool;
+    }
 
     public void mouseDown() {
         currentTool.mouseDown();
